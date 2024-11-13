@@ -1,0 +1,62 @@
+body {
+    /* Color de fondo azul */
+    background: steelblue;
+     /* Color de texto blanco */
+    color: #eee;
+    /* Fuente del texto */
+    font-family: sans-serif;
+    /* Centrar el texto y los elementos */
+    text-align: center;
+  }
+  
+  #tablero {
+    /* Margen del div tablero de 50 px arriba */
+    margin-top: 50px;
+    /* Imagen de fondo para el tablero */
+    background: url(http://img.freepik.com/free-photo/wooden-texture_1160-686.jpg?size=338&amp;ext=jpg);
+    /* Añadir una sombra debajo del tablero */
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6);
+    /* Redondear el borde del tablero 3 px */
+    border-radius: 3px;
+    /* Une los bordes de las celdas del div en un solo borde compartido */
+    border-collapse: collapse;
+    /* Define la longitud de altura del tablero en 400 px */
+    height: 400px;
+    /* Define la longitud de anchura del tablero en 400 px */
+    width: 400px;
+    /* Ajustar la posición a absoluta para que esté en el centro */
+    position: absolute;
+    /* Ajusta el top desde el que aparece el tablero */
+    top: 30px;
+    /* Reincia la página para que el navegador no use sus margenes propios */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  
+  #tablero div div {
+    /* Da el color negro a las fichas negras */
+    color: #222;
+    /* Hace que las fichas se pongan a izquierda */
+    float: left;
+    /* Cambiar el tamaño de las fichas a 36px */
+    font-size: 36px;
+    /* Poner una sombra blanca */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .6);
+    /* Ajustar el tamaño del div con 50px de ancho y alto */
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Dar color a los cuadrados negros del tablero */
+  #tablero div:nth-child(odd) div:nth-child(even),
+  #tablero div:nth-child(even) div:nth-child(odd) {
+    background: rgba(0, 0, 0, .4);
+  }
+  
+  /* Da el color blanco a las fichas blancas */
+  #tablero div:nth-child(n+7) div {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+  }
